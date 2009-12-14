@@ -5,8 +5,10 @@ begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
     gem.name = "e164"
-    gem.summary = %Q{TODO: one-line summary of your gem}
-    gem.description = %Q{TODO: longer description of your gem}
+    gem.summary = %Q{This gem provides e164 parsing and normalization}
+    gem.description = %Q{The e164 gem can parse and normalize numbers into the e164 format.
+      It provides extra information on the Country Code and National Destination Codes.
+      It can be used standalone or mixed into a model.}
     gem.email = "hexorx@gmail.com"
     gem.homepage = "http://github.com/hexorx/e164"
     gem.authors = ["hexorx"]
