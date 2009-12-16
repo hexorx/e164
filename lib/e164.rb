@@ -1,10 +1,11 @@
 module E164
+  
+  Dir.glob(File.join(File.dirname(__FILE__), 'e164/*.rb')).each {|f| require f }
+  
   ValidFormat = /^\+([\d]{1,3})([\d]{1,14})$/
   Identifiers = ['+','011']
   DefaultIdentifier = '+'
   DefaultCountryCode = '1'
-  
-  require 'e164/CountryCodes'
   
   def self.normalize(num)
     parse(num).unshift(DefaultIdentifier).join
@@ -38,6 +39,16 @@ module E164
   
   def self.join_national_destination_code(num)
     country = CountryCodes[num[0]]
-    [num.shift, num.shift(country[:national_country_codes]).join, *num]
+    
+    case (destination_codes = country[:national_destination_codes])
+    when Integer
+      destination_code_length = destination_codes
+    when Hash
+      potentials = destination_codes[:range].map {|l| num[1,l].join}
+      destination_code = potentials.map {|x| destination_codes[x] ? x : nil}.compact.first
+      destination_code_length = destination_code.length || destination_codes[:default]
+    end
+    
+    [num.shift, num.shift(destination_code_length).join, *num]
   end
 end
