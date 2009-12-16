@@ -1,7 +1,7 @@
 Dir.glob(File.join(File.dirname(__FILE__), 'national_destination_codes/*.rb')).each {|f| require f }
 
 CountryCodes = {
-  '1' => {:national_destination_codes => NANP, :abbreviation => 'NANP', :description => 'USA/NANP', :info => 'en.wikipedia.com.org/wiki/NANP'},
+  '1' => {:national_destination_codes => 3, :abbreviation => 'NANP', :description => 'North American Numbering Plan', :info => 'en.wikipedia.com.org/wiki/NANP'},
   '7' => {:national_destination_codes => 3, :abbreviation => '', :description => 'Russia', :info => 'en.wikipedia.com.org/wiki/Russia'},
   
   '20' => {:national_destination_codes => 2, :abbreviation => '', :description => 'Egypt', :info => 'en.wikipedia.com.org/wiki/Egypt'},
