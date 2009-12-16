@@ -1,4 +1,5 @@
-= e164
+E164
+====
 
 E164 is a standard for formatting and routing international phone numbers. The goal of this gem is to make working with these numbers simpler. The E164 standard is composed of the following parts:
 
@@ -9,18 +10,21 @@ E164 is a standard for formatting and routing international phone numbers. The g
 
 Right now the gem has the ability to parse out these 4 fields and normalize them to a standard format. It also contains country information scraped from wikipedia. Information has been scraped for the North American Numbering Plan (NANP), Austria and Germany as well. Right now this is just basic information and I hope to expand it in the future.
 
-== Warning!
+Warning!
+--------
 
 This gem is both incomplete and very US/NANP centric. So check the results before using in production. If you have information on formatting or route data either fork and add it or contact me. The biggest challenge is going to be keeping data used for parsing up to date.
 
-== Installation
+Installation
+------------
 
 E164 is hosted on GemCutter, so simply run the following:
 
     gem sources -a http://gemcutter.org
     sudo gem install inherited_resources
     
-== Use It!
+Use It!
+-------
 
 E164 contains two main methods on the E164 module. The *parse* method takes a phone number as a string and returns an array containing CC,NDC and SN. If no IAC is found a default country is presumed. Right now the IAC's looked for are ['+','011'] and the default CC is 1 (NANP). Options to override the defaults will be coming soon.
 
@@ -54,14 +58,16 @@ Just like the CountryCodes, NDC info is stored in a hash of hashes and accessed 
     
     E164::Germany['10'] => {:description => 'Call-By-Call'}
 
-== ToDo
+ToDo
+----
 
 * Country specific formatting
 * Add overrides for default options
 * Add data for more areas
 * Link to additional info for countries (currency, timezone, etc.)
 
-== Note on Patches/Pull Requests
+Note on Patches/Pull Requests
+-----------------------------
  
 * Fork the project.
 * Make your feature addition or bug fix.
@@ -72,6 +78,7 @@ Just like the CountryCodes, NDC info is stored in a hash of hashes and accessed 
    bump version in a commit by itself I can ignore when I pull)
 * Send me a pull request. Bonus points for topic branches.
 
-== Copyright
+Copyright
+---------
 
 Copyright (c) 2009 hexorx. See LICENSE for details.
