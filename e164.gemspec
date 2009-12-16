@@ -5,24 +5,24 @@
 
 Gem::Specification.new do |s|
   s.name = %q{e164}
-  s.version = "0.1.0"
+  s.version = "0.1.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["hexorx"]
-  s.date = %q{2009-12-15}
+  s.date = %q{2009-12-16}
   s.description = %q{The e164 gem can parse and normalize numbers into the e164 format.
       It provides extra information on the Country Code and National Destination Codes.
       It can be used standalone or mixed into a model.}
   s.email = %q{hexorx@gmail.com}
   s.extra_rdoc_files = [
     "LICENSE",
-     "README.rdoc"
+     "README.markdown"
   ]
   s.files = [
     ".document",
      ".gitignore",
      "LICENSE",
-     "README.rdoc",
+     "README.markdown",
      "Rakefile",
      "VERSION",
      "e164.gemspec",
