@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{e164}
-  s.version = "0.0.0"
+  s.version = "0.1.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["hexorx"]
-  s.date = %q{2009-12-14}
+  s.date = %q{2009-12-15}
   s.description = %q{The e164 gem can parse and normalize numbers into the e164 format.
       It provides extra information on the Country Code and National Destination Codes.
       It can be used standalone or mixed into a model.}
@@ -27,6 +27,11 @@ Gem::Specification.new do |s|
      "VERSION",
      "e164.gemspec",
      "lib/e164.rb",
+     "lib/e164/country_codes.rb",
+     "lib/e164/national_destination_codes/austria.rb",
+     "lib/e164/national_destination_codes/germany.rb",
+     "lib/e164/national_destination_codes/nanp.rb",
+     "lib/load_data.sql",
      "spec/e164_spec.rb",
      "spec/spec_helper.rb"
   ]
