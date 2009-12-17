@@ -66,6 +66,10 @@ ToDo
 * Add data for more areas
 * Link to additional info for countries (currency, timezone, etc.)
 
+Sponsored By
+------------
+This gem is sponsored by [Teliax][]. [Teliax][] makes business class Voice, [Centrex][](Including Hosted: IVRs, Ring Groups, Extensions and Day Night Mode) and Data services accessible to anyone. You don't have to be a fortune 500 to sound big!
+
 Note on Patches/Pull Requests
 -----------------------------
  
@@ -82,3 +86,7 @@ Copyright
 ---------
 
 Copyright (c) 2009 hexorx. See LICENSE for details.
+
+
+[Teliax]: http://teliax.com
+[Centrex]: http://en.wikipedia.org/wiki/Centrex
