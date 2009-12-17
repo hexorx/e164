@@ -21,7 +21,7 @@ Installation
 E164 is hosted on GemCutter, so simply run the following:
 
     gem sources -a http://gemcutter.org
-    sudo gem install inherited_resources
+    sudo gem install e164
     
 Use It!
 -------
