@@ -46,7 +46,7 @@ module E164
     when Hash
       potentials = destination_codes[:range].map {|l| num[1,l].join}
       destination_code = potentials.map {|x| destination_codes[x] ? x : nil}.compact.first
-      destination_code_length = destination_code.length || destination_codes[:default]
+      destination_code_length = (destination_code && destination_code.length) || destination_codes[:default]
     end
     
     [num.shift, num.shift(destination_code_length).join, *num]

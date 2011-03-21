@@ -21,5 +21,9 @@ describe E164 do
     it 'should not add country code if it already starts with the default country code and no identifier' do
       E164.normalize('13035559850').should == "+13035559850"
     end
+    
+    it "shouldn't die on german numbers" do
+      lambda { E164.normalize('+4988612345670') }.should_not raise_error
+    end
   end
 end
