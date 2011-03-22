@@ -1,3 +1,5 @@
+# encoding: utf-8
+
 Germany = {
   :range => 2..3,
   :default => 3,

@@ -1,3 +1,5 @@
+# encoding: utf-8
+
 Dir.glob(File.join(File.dirname(__FILE__), 'national_destination_codes/*.rb')).each {|f| require f }
 
 CountryCodes = {
