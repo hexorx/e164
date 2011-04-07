@@ -1,3 +1,5 @@
+# encoding: utf-8
+
 NANP = {
   :range => 3..3,
   :default => 3,
