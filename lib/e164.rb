@@ -3,7 +3,7 @@ module E164
   Dir.glob(File.join(File.dirname(__FILE__), 'e164/*.rb')).each {|f| require f }
   
   ValidFormat = /^\+([\d]{1,3})([\d]{1,14})$/
-  Identifiers = ['+','011']
+  Identifiers = ['+','011', '00']
   DefaultIdentifier = '+'
   DefaultCountryCode = '1'
   

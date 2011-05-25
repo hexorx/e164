@@ -25,5 +25,9 @@ describe E164 do
     it "shouldn't die on german numbers" do
       lambda { E164.normalize('+4988612345670') }.should_not raise_error
     end
+
+    it 'should handle 00 identifier' do
+      E164.normalize('00441234567890').should == '+441234567890'
+    end
   end
 end
