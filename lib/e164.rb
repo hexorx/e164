@@ -5,7 +5,7 @@ module E164
   ValidFormat = /^\+([\d]{1,3})([\d]{1,14})$/
   Identifiers = ['+','011', '00']
   DefaultIdentifier = '+'
-  DefaultCountryCode = '1'
+  DefaultCountryCode = '1'  # Override by E164.set_default_country_code!()
   
   def self.normalize(num)
     parse(num).unshift(DefaultIdentifier).join
@@ -50,5 +50,11 @@ module E164
     end
     
     [num.shift, num.shift(destination_code_length).join, *num]
+  end
+
+  def self.set_default_country_code!(country_code)
+    ret_value = remove_const(:DefaultCountryCode)
+    const_set(:DefaultCountryCode, country_code)
+    ret_value
   end
 end
