@@ -8,6 +8,18 @@ describe E164 do
   it 'should set DefaultCountryCode to 1(NANP)' do
     E164::DefaultCountryCode.should == '1'
   end
+
+  describe '#set_default_country_code!' do
+    it 'should override DefaultCountryCode' do
+      original = E164.set_default_country_code!('44')
+      begin
+        E164::DefaultCountryCode.should == '44'
+      ensure
+        # set back original DefaultCountryCode's value
+        E164.set_default_country_code!(original)
+      end
+    end
+  end
   
   describe '#normalize' do
     it 'should remove all non-numeric punctuation except the e164 identifier prefix' do
@@ -24,6 +36,10 @@ describe E164 do
     
     it "shouldn't die on german numbers" do
       lambda { E164.normalize('+4988612345670') }.should_not raise_error
+    end
+
+    it 'should handle 00 identifier' do
+      E164.normalize('00441234567890').should == '+441234567890'
     end
   end
 end
