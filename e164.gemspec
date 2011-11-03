@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{e164}
-  s.version = "0.3.0"
+  s.version = "0.3.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
-  s.authors = ["hexorx"]
-  s.date = %q{2011-05-26}
+  s.authors = [%q{hexorx}]
+  s.date = %q{2011-11-03}
   s.description = %q{The e164 gem can parse and normalize numbers into the e164 format.
       It provides extra information on the Country Code and National Destination Codes.
       It can be used standalone or mixed into a model.}
@@ -37,13 +37,9 @@ Gem::Specification.new do |s|
     "spec/spec_helper.rb"
   ]
   s.homepage = %q{http://github.com/hexorx/e164}
-  s.require_paths = ["lib"]
-  s.rubygems_version = %q{1.6.2}
+  s.require_paths = [%q{lib}]
+  s.rubygems_version = %q{1.8.6}
   s.summary = %q{This gem provides e164 parsing and normalization}
-  s.test_files = [
-    "spec/e164_spec.rb",
-    "spec/spec_helper.rb"
-  ]
 
   if s.respond_to? :specification_version then
     s.specification_version = 3
