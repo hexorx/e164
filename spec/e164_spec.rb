@@ -42,4 +42,14 @@ describe E164 do
       E164.normalize('00441234567890').should == '+441234567890'
     end
   end
+
+  describe "#parse" do
+    CountryCodes.each do |code, data|
+      it "should pick up the correct country code for #{data[:description]} when in + format" do
+        # Create a false number in + format because the code provided is correct
+        fake_number = "+#{code}1234567"
+        E164.parse(fake_number)[0].should == code
+      end
+    end
+  end
 end
