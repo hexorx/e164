@@ -15,13 +15,10 @@ CountryCodes = {
   '33' => {:national_destination_codes => 1, :abbreviation => '', :description => 'France', :info => 'en.wikipedia.com.org/wiki/France'},
   '34' => {:national_destination_codes => 2, :abbreviation => '', :description => 'Spain', :info => 'en.wikipedia.com.org/wiki/Spain'},
   '36' => {:national_destination_codes => 2, :abbreviation => '', :description => 'Hungary', :info => 'en.wikipedia.com.org/wiki/Hungary'},
-  '37' => {:national_destination_codes => 2, :abbreviation => '', :description => 'discontinued (was assigned to the [German Democratic Republic] (East Germany) until April 1992.', :info => ''},
-  '38' => {:national_destination_codes => 2, :abbreviation => '', :description => 'discontinued (was assigned to [Yugoslavia] before break', :info => ''},
   '39' => {:national_destination_codes => 3, :abbreviation => '', :description => 'Italy', :info => 'en.wikipedia.com.org/wiki/Italy'},
   
   '40' => {:national_destination_codes => 2, :abbreviation => '', :description => 'Romania', :info => 'en.wikipedia.com.org/wiki/Romania'},
   '41' => {:national_destination_codes => 2, :abbreviation => '', :description => 'Switzerland', :info => 'en.wikipedia.com.org/wiki/Switzerland'},
-  '42' => {:national_destination_codes => 2, :abbreviation => '', :description => 'previously assigned to [Czechoslovakia] until its breakup. Czech Republic and Slovakia used this common code until 1 March 1997.', :info => ''},
   '43' => {:national_destination_codes => Austria, :abbreviation => '', :description => 'Austria', :info => 'en.wikipedia.com.org/wiki/Austria'},
   '44' => {:national_destination_codes => 2, :abbreviation => '', :description => 'United Kingdom', :info => 'en.wikipedia.com.org/wiki/United_Kingdom'},
   '45' => {:national_destination_codes => 2, :abbreviation => '', :description => 'Denmark', :info => 'en.wikipedia.com.org/wiki/Denmark'},
