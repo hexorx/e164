@@ -54,7 +54,7 @@ Just like the CountryCodes, NDC info is stored in a hash of hashes and accessed 
 
     E164::NANP('303') #=> {:abbreviation => 'Colorado', :description => '[Colorado] (Boulder, Longmont, Aurora, Denver and central Colorado, overlays with [720])', :info => 'en.wikipedia.com.org/wiki/Area_codes_303_and_720'}
     
-    E164::Austria['1'] => {:description => 'Wient'}
+    E164::Austria['1'] => {:description => 'Wien'}
     
     E164::Germany['10'] => {:description => 'Call-By-Call'}
 
