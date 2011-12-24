@@ -29,6 +29,10 @@ describe E164 do
     it 'should add default country code if no country code e164 identifier is found.' do
       E164.normalize('3035559850').should == "+13035559850"
     end
+
+    it 'should not add default country code if the number is longer than default country length' do
+      E164.normalize('447966845555').should == '+447966845555'
+    end
     
     it 'should not add country code if it already starts with the default country code and no identifier' do
       E164.normalize('13035559850').should == "+13035559850"

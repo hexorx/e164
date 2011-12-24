@@ -6,6 +6,7 @@ module E164
   Identifiers = ['+','011', '00']
   DefaultIdentifier = '+'
   DefaultCountryCode = '1'  # Override by E164.set_default_country_code!()
+  DefaultCountryLength = 10 # Override by E164.set_default_country_length!()
   
   def self.normalize(num)
     parse(num).unshift(DefaultIdentifier).join
@@ -14,9 +15,14 @@ module E164
   def self.parse(num)
     num = e164_clean(num)
     identifier = Identifiers.include?(num.first) ? num.shift : nil
+   
+    if identifier || num.join.start_with?(DefaultCountryCode)
+      num = join_country_code(num)
+    else
+      num = num.unshift(DefaultCountryCode) if num.join.length == DefaultCountryLength
+    end
     
-    num = (identifier || num.join.start_with?(DefaultCountryCode)) ? join_country_code(num) : num.unshift(DefaultCountryCode)
-    num = join_national_destination_code(num)
+    num = join_national_destination_code(num) if CountryCodes[num[0]] 
     
     [num.shift,num.shift,num.join]
   end
