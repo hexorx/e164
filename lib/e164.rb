@@ -63,4 +63,10 @@ module E164
     const_set(:DefaultCountryCode, country_code)
     ret_value
   end
+
+  def self.set_default_country_length!(country_length)
+    ret_value = remove_const(:DefaultCountryLength)
+    const_set(:DefaultCountryLength, country_length)
+    ret_value
+  end
 end

@@ -20,6 +20,18 @@ describe E164 do
       end
     end
   end
+
+  describe '#set_default_country_length!' do
+    it 'should override DefaultCountryLength' do
+      original = E164.set_default_country_length!('12')
+      begin
+        E164::DefaultCountryLength.should == '12'
+      ensure
+        # set back original DefaultCountryLength's value
+        E164.set_default_country_length!(original)
+      end
+    end
+  end
   
   describe '#normalize' do
     it 'should remove all non-numeric punctuation except the e164 identifier prefix' do
