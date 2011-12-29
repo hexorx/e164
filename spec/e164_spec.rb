@@ -4,7 +4,7 @@ describe E164 do
   it 'should set ValidFormat to regex that validates e164' do
     '+13035559850'.should =~ E164::ValidFormat
   end
-  
+
   it 'should set DefaultCountryCode to 1(NANP)' do
     E164::DefaultCountryCode.should == '1'
   end
@@ -21,6 +21,12 @@ describe E164 do
     end
   end
 
+  describe "#country_codes" do
+    it 'should search country code hash' do
+      E164.country_codes['1'].should == {:national_destination_codes=>3, :abbreviation=>"NANP", :description=>"North American Numbering Plan", :info=>"en.wikipedia.com.org/wiki/NANP"}
+    end
+  end
+
   describe '#set_default_country_length!' do
     it 'should override DefaultCountryLength' do
       original = E164.set_default_country_length!('12')
@@ -32,12 +38,12 @@ describe E164 do
       end
     end
   end
-  
+
   describe '#normalize' do
     it 'should remove all non-numeric punctuation except the e164 identifier prefix' do
       E164.normalize('+1 (303) 555-9850').should == '+13035559850'
     end
-    
+
     it 'should add default country code if no country code e164 identifier is found.' do
       E164.normalize('3035559850').should == "+13035559850"
     end
@@ -45,11 +51,11 @@ describe E164 do
     it 'should not add default country code if the number is longer than default country length' do
       E164.normalize('447966845555').should == '+447966845555'
     end
-    
+
     it 'should not add country code if it already starts with the default country code and no identifier' do
       E164.normalize('13035559850').should == "+13035559850"
     end
-    
+
     it "shouldn't die on german numbers" do
       lambda { E164.normalize('+4988612345670') }.should_not raise_error
     end
