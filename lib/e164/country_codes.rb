@@ -17,7 +17,7 @@ CountryCodes = {
   '36' => {:national_destination_codes => 2, :abbreviation => '', :description => 'Hungary', :info => 'en.wikipedia.com.org/wiki/Hungary'},
   '39' => {:national_destination_codes => 3, :abbreviation => '', :description => 'Italy', :info => 'en.wikipedia.com.org/wiki/Italy'},
   
-  '40' => {:national_destination_codes => 2, :abbreviation => '', :description => 'Romania', :info => 'en.wikipedia.com.org/wiki/Romania'},
+  '40' => {:national_destination_codes => Romania, :abbreviation => '', :description => 'Romania', :info => 'en.wikipedia.com.org/wiki/Romania'},
   '41' => {:national_destination_codes => 2, :abbreviation => '', :description => 'Switzerland', :info => 'en.wikipedia.com.org/wiki/Switzerland'},
   '43' => {:national_destination_codes => Austria, :abbreviation => '', :description => 'Austria', :info => 'en.wikipedia.com.org/wiki/Austria'},
   '44' => {:national_destination_codes => 2, :abbreviation => '', :description => 'United Kingdom', :info => 'en.wikipedia.com.org/wiki/United_Kingdom'},
