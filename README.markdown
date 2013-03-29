@@ -42,22 +42,24 @@ The *normalize* method also takes a number as a string but returns it in the sta
     
 Country info is stored in a hash of hashes with the CC being the key.
 
-    E164::CountryCodes['1'] #=> {:national_destination_codes => 3, :abbreviation => 'NANP', :description => 'North American Numbering Plan', :info => 'en.wikipedia.com.org/wiki/NANP'}
+    ::CountryCodes['1'] #=> {:national_destination_codes => 3, :abbreviation => 'NANP', :description => 'North American Numbering Plan', :info => 'en.wikipedia.com.org/wiki/NANP'}
     
 NDC information is available for:
 
 * NANP
 * Austria
 * Germany
+* Romania
 
 Just like the CountryCodes, NDC info is stored in a hash of hashes and accessed through a constant. Some NDCs will have more information than others.
 
-    E164::NANP('303') #=> {:abbreviation => 'Colorado', :description => '[Colorado] (Boulder, Longmont, Aurora, Denver and central Colorado, overlays with [720])', :info => 'en.wikipedia.com.org/wiki/Area_codes_303_and_720'}
+    ::NANP('303') #=> {:abbreviation => 'Colorado', :description => '[Colorado] (Boulder, Longmont, Aurora, Denver and central Colorado, overlays with [720])', :info => 'en.wikipedia.com.org/wiki/Area_codes_303_and_720'}
     
-    E164::Austria['1'] => {:description => 'Wien'}
+    ::Austria['1'] => {:description => 'Wien'}
     
-    E164::Germany['10'] => {:description => 'Call-By-Call'}
+    ::Germany['10'] => {:description => 'Call-By-Call'}
 
+    ::Romania['256'] => {:description => 'Timișoara'}
 ToDo
 ----
 

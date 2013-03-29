@@ -52,4 +52,19 @@ describe E164 do
       end
     end
   end
+
+  describe '#is_mobile' do
+    it 'should return true for a Romanian mobile number' do
+      E164.is_mobile?("+40720123123").should == true
+    end
+    it 'should return false for a Romanian landline number' do
+      E164.is_mobile?("+40256123123").should == false
+    end
+    it 'should return true for a Austrian mobile number' do
+      E164.is_mobile?("+436501231231").should == true
+    end
+    it 'should return false for a Austrian landline number' do
+      E164.is_mobile?("+4311231231").should == false
+    end
+  end
 end
