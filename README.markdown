@@ -60,6 +60,14 @@ Just like the CountryCodes, NDC info is stored in a hash of hashes and accessed 
     ::Germany['10'] => {:description => 'Call-By-Call'}
 
     ::Romania['256'] => {:description => 'Timișoara'}
+    
+You can also check if a phone number is a mobile phone or not. 
+
+    E164.is_mobile?('+40720123123') #=> true
+    E164.is_mobile?('+40256123123') #=> false
+    
+This works for Romania and Austria. 
+    
 ToDo
 ----
 
